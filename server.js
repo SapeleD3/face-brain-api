@@ -29,7 +29,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 
-app.get('/', (req, res) => { res.send(database.users) })
+app.get('/', (req, res) => { res.send('it is Working') })
 
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, postgres, bcrypt)})
 
