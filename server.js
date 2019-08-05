@@ -42,6 +42,6 @@ app.put('/image', (req, res) => {image.updateImage(req, res, postgres)})
 app.post('/imageurl', (req, res) => {image.handleApiCall(req, res)})
 
 
-app.listen(6536, () => {
-    console.log('App is running on port 6536')
+app.listen(process.env.PORT, () => {
+    console.log(`App is running on port ${process.env.PORT}`)
 })
