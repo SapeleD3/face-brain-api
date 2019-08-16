@@ -5,7 +5,6 @@ const app = new Clarifai.App({
 });
 
 const handleApiCall = (req, res,) => {
-    app.models
     app.models.initModel({id: Clarifai.FACE_DETECT_MODEL,})
     .then(generalModel => {
       return generalModel.predict(req.body.input);
